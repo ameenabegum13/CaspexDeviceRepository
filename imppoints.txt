@@ -1,0 +1,10 @@
+Have used Mysql for the endpoint "Get all Devices for a given OS name"
+EndPoint:
+http://localhost:8080/devices/os/Windows
+
+As the Aerospike is not allowing to fetch the data with column name query like find by OS name.
+
+I tried to resolve to fetch by AerospikeRepository ,but facing Unsupported Server Feature.
+
+Therefore i used Spring Data JpaRepository to fetch findByOsName.
+
