@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.3.4</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<groupId>com.caspex.app</groupId>
+	<artifactId>CaspexDeviceMatchingApp</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>CaspexDeviceMatchingApp</name>
+	<description>Demo project for CaspexDeviceMatchingApp</description>
+
+	<properties>
+		<java.version>17</java.version>
+		<spring-boot.version>3.3.4</spring-boot.version> <!-- Ensure this is
+		consistent with other Spring dependencies -->
+		<hibernate.version>6.1.7.Final</hibernate.version> <!-- Ensure you're
+		using a compatible version -->
+	</properties>
+
+	<dependencies>
+		<!-- Spring Boot Web Starter -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.aerospike</groupId>
+			<artifactId>aerospike-client</artifactId>
+			<version>5.0.0</version> <!-- Ensure this version is compatible -->
+		</dependency>
+
+		<dependency>
+			<groupId>com.aerospike</groupId>
+			<artifactId>spring-data-aerospike</artifactId>
+			<version>4.2.0</version> <!-- Use the latest version -->
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.33</version> <!-- Add version explicitly -->
+		</dependency>
+
+
+		<!-- Spring Data JPA Starter -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>${spring-boot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.8.2</version> <!-- Specify the version you want to use -->
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Mockito (included in spring-boot-starter-test) -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>4.0.0</version> <!-- Specify the version you want to use -->
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sf.uadetector</groupId>
+			<artifactId>uadetector-resources</artifactId>
+			<version>2014.10</version>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<!-- Aerospike Repository -->
+		<repository>
+			<id>aerospike</id>
+			<url>https://repo.aerospike.com/artifactory/maven</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<plugins>
+			<!-- Spring Boot Maven Plugin -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
