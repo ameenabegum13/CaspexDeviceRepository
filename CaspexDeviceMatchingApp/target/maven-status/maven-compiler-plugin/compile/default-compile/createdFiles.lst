@@ -1,0 +1,10 @@
+com\caspex\model\mysql\MySQLDevice.class
+com\caspex\repository\mysql\MySqlDeviceRepository.class
+com\caspex\model\Device.class
+com\caspex\config\MySqlConfig.class
+com\caspex\controller\DeviceController.class
+com\caspex\repository\DeviceRepository.class
+com\caspex\service\DeviceService.class
+com\caspex\app\CaspexDeviceMatchingAppApplication.class
+com\caspex\config\AerospikeConfig.class
+com\caspex\repository\DevicesRepository.class
